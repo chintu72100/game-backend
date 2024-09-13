@@ -13,6 +13,9 @@ mongoose.connect("mongodb+srv://manasraj19:1234@todoweb.gbqsate.mongodb.net/?ret
 
 app.use('/', require('./apis/user.route'));
 app.use('/', require('./apis/game.route'));
+app.use('/' , (req,res)=>{
+    res.send("HI");
+});
 
 app.listen(3000,()=>{
     console.log(`listening on port 3000`);
